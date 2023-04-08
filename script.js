@@ -1,4 +1,3 @@
-let letters = document.querySelectorAll('.guessingLetters')
 let firstGuess = document.querySelectorAll('.first-row')
 let secondGuess = document.querySelectorAll('.second-row')
 let thirdGuess = document.querySelectorAll('.third-row')
@@ -21,14 +20,7 @@ let checkGuess = (guess)=>{
                 } else {
                     firstGuess[i].style.backgroundColor = "gray"
                 }
-                if(!firstGuess[i].style.backgroundColor === 'gray') {
-                    for(let k = 0; k < letters.length; k++){
-                        letters[k].readOnly = true
-                    }
-                    console.log('aa')
-                } else {
-                    firstGuess[i].readOnly = true
-                }
+                firstGuess[i].readOnly = true
             }
         }
         checkBtn.setAttribute('onclick', 'checkGuess(`second`)')
@@ -46,6 +38,7 @@ let checkGuess = (guess)=>{
                 } else {
                     secondGuess[i].style.backgroundColor = "gray"
                 }
+                secondGuess[i].readOnly = true
             }
         }
         checkBtn.setAttribute('onclick', 'checkGuess(`third`)')
@@ -63,6 +56,7 @@ let checkGuess = (guess)=>{
                 } else {
                     thirdGuess[i].style.backgroundColor = "gray"
                 }
+                thirdGuess[i].readOnly = true
             }
         }
         checkBtn.setAttribute('onclick', 'checkGuess(`fourth`)')
@@ -80,6 +74,7 @@ let checkGuess = (guess)=>{
                 } else {
                     fourthGuess[i].style.backgroundColor = "gray"
                 }
+                fourthGuess[i].readOnly = true
             }
         }
         checkBtn.setAttribute('onclick', 'checkGuess(`fifth`)')
@@ -97,6 +92,7 @@ let checkGuess = (guess)=>{
                 } else {
                     fifthGuess[i].style.backgroundColor = "gray"
                 }
+                fifthGuess[i].readOnly = true
             }
         }
     }
