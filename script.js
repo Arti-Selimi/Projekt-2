@@ -7,7 +7,7 @@ let fifthGuess = document.querySelectorAll('.fifth-row')
 let checkBtn = document.getElementById("checkBtn")
 let answer = document.getElementById('answer')
 
-let dailyWord = ['W','O','R','D','S']
+let dailyWord = ['W', 'O', 'R', 'D', 'S']
 
 let checkGuess = (guess)=>{
     if(guess === 'first') {
