@@ -7,6 +7,7 @@ const dailyWordObj = totalWords[Math.floor(Math.random()*2314)]
 const dailyWord = Array.from(dailyWordObj.word)
 console.log(dailyWord)
 let counter = 0
+console.log(inputs)
 
 let checkGuess = ()=>{
     console.log('counter',counter)
@@ -18,7 +19,17 @@ let checkGuess = ()=>{
                 } else {
                     e.style.background = "gray" 
                 }
-                e.setAttribute('readonly', true)
+                e.setAttribute('readonly', true);
+                e.style.background === "green" ? answer.innerHTML = "Good Job! the word was " + dailyWord.join("") : answer.innerHTML = "Not yet!"; 
+                if(e.style.background === "green") {
+                    for(var j = 0; j < inputs.length; j++){
+                        inputs[j].setAttribute('readonly', true);
+                    }         
+                    answer.innerHTML = "Good Job! the word was " + dailyWord.join("")           
+                } else {
+                    e.setAttribute('readonly', true);
+                    answer.innerHTML = "Not yet!"; 
+                }
         }
     )
     counter++
